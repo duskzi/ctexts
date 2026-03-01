@@ -1,3 +1,4 @@
+<img width="320" alt="ctext image header" src="images/ctext-icon.png" />
 # CTexts
 
 Colorful Texts is a simple JS parser that applies colors to text using inline tokens like ```@c:red @c:green @c:```

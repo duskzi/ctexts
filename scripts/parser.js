@@ -59,4 +59,3 @@ for (let text of texts) {
 
     text.innerHTML = result.trim();
 }
-
