@@ -31,20 +31,23 @@ for (let text of texts) {
             let key = subToken[0];
             let value = subToken[1];
 
-            if(CTEXT_DEBUG_MODE == true) {
+            if(CTEXT_DEBUG_MODE) {
                 console.log(token);
                 console.log(key);
                 console.log(value);
             }
-
-            switch(key)
+            
+            if(value === "") {
+                token = `</span>`;
+            }
+            else switch(key)
             {
                 case "c":
-                    if(value === "") {
-                        value = CTEXT_DEFAULT_COLOR;
-                    }
-
                     token = `<span style="color:${value}">`;
+                    break;
+                
+                case "w":
+                    token = `<span class="__wavy-text">`;
                     break;
                 
                 // TODO: add more key types, such as a (animated)
